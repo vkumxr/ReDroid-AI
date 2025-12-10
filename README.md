@@ -64,43 +64,41 @@ Extracts structural and behavioral indicators from software artifacts.
 
 ---
 
-# 📁 Project Structure
+## 📁 Project Structure
 
+```text
 ReDroid-AI/
 ├── analyzers/
-│ ├── static_analyzer.py
-│ └── init.py
+│   ├── static_analyzer.py
+│   └── __init__.py
 ├── utils/
-│ ├── file_utils.py
-│ ├── manifest_parser.py
-│ ├── string_scanner.py
-│ └── init.py
+│   ├── file_utils.py
+│   ├── manifest_parser.py
+│   ├── string_scanner.py
+│   └── __init__.py
 ├── examples/
-│ └── sample.json
-├── pacman.apk (demo sample)
+│   └── sample.json
+├── pacman.apk       (demo sample)
 └── README.md
-
+```
 
 ---
 
-# 🧩 Architecture Overview
+## 🧩 Architecture Overview
 
-
-
+```text
 Artifact (APK for demo)
-│
-├── Decode / Decompile (apktool / JADX)
-│
-├── Manifest Parser
-│
-├── String Scanner
-│
-├── Static Analyzer
-│
-└── JSON Output → (Input for ReDroid-AI Reasoning Engine)
-
-
-**This JSON becomes the core signal set for the upcoming AI engine.**
+      │
+      ├── Decode / Decompile (apktool / JADX)
+      │
+      ├── Manifest Parser
+      │
+      ├── String Scanner
+      │
+      ├── Static Analyzer
+      │
+      └── JSON Output → (Input for ReDroid-AI Reasoning Engine)
+```
 
 ---
 
