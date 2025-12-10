@@ -78,7 +78,6 @@ APK File
 |
 |--→ JSON Report (AI-ready)
 
-
 This JSON becomes the **input** for the upcoming **AI Reasoning Engine**.
 
 ---
