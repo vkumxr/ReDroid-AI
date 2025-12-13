@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "engine": "ReDroid-AI Phase 2",
+    "version": "0.3"
+  },
+  "risk_summary": {
+    "score": 120,
+    "level": "HIGH"
+  },
+  "findings": [
+    {
+      "type": "permission_risk",
+      "permission": "android.permission.READ_SMS",
+      "severity": "HIGH",
+      "reason": "Permission frequently abused by malware"
+    },
+    {
+      "type": "permission_risk",
+      "permission": "android.permission.RECEIVE_SMS",
+      "severity": "HIGH",
+      "reason": "Can intercept incoming SMS"
+    },
+    {
+      "type": "permission_combo_abuse",
+      "permissions": [
+        "android.permission.READ_SMS",
+        "android.permission.RECEIVE_SMS"
+      ],
+      "severity": "CRITICAL",
+      "reason": "OTP theft via SMS interception"
+    },
+    {
+      "type": "permission_combo_abuse",
+      "permissions": [
+        "android.permission.READ_SMS",
+        "android.permission.INTERNET"
+      ],
+      "severity": "CRITICAL",
+      "reason": "SMS data exfiltration to remote server"
+    }
+  ]
+}
