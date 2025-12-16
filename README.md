@@ -1,11 +1,10 @@
+<!-- Typing SVG -->
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=36&pause=1200&color=FF3B3B&center=true&vCenter=true&width=700&lines=ReDroid+AI" />
+  <img
+    src="https://readme-typing-svg.herokuapp.com?size=32&font=DotGothic16&color=32CD32&center=true&vCenter=true&width=650&lines=ReDroid+AI;AI+for+Reverse+Engineering;Building+AI+Automation+Systems"
+    alt="typing"
+  />
 </p>
-
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=28&pause=999999&color=3B82F6&center=true&vCenter=true&width=900&lines=AI+for+Reverse+Engineering" />
-</p>
-
 
 
 
