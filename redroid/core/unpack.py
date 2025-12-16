@@ -1,5 +1,5 @@
 from pathlib import Path
-import zipfile
+import subprocess
 import tempfile
 
 
@@ -7,22 +7,17 @@ class APKUnpackError(Exception):
     pass
 
 
-def unpack_apk(apk_path: str) -> Path:
-    apk = Path(apk_path)
-
-    if not apk.exists():
-        raise APKUnpackError(f"APK not found: {apk}")
-
-    if apk.suffix.lower() != ".apk":
-        raise APKUnpackError("Input file is not an APK")
+def unpack_apk(apk_path: Path) -> Path:
+    out_dir = Path(tempfile.mkdtemp(prefix="redroid_decoded_"))
 
     try:
-        tmp_dir = Path(tempfile.mkdtemp(prefix="redroid_apk_"))
+        subprocess.run(
+            ["apktool", "d", "-f", apk_path, "-o", out_dir],
+            check=True,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL
+        )
+        return out_dir
 
-        with zipfile.ZipFile(apk, "r") as z:
-            z.extractall(tmp_dir)
-
-        return tmp_dir
-
-    except zipfile.BadZipFile:
-        raise APKUnpackError("Invalid or corrupted APK")
+    except Exception:
+        raise APKUnpackError("apktool failed to decode APK")
