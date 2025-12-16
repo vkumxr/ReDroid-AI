@@ -1,7 +1,7 @@
 <!-- Typing SVG -->
 <p align="center">
   <img
-    src="https://readme-typing-svg.herokuapp.com?size=32&font=DotGothic16&color=3B82F6&center=true&vCenter=true&width=650&lines=ReDroid+AI;AI+for+Reverse+Engineering;Building+AI+Automation+Systems"
+    src="https://readme-typing-svg.herokuapp.com?size=32&font=DotGothic16&color=3B82F6&center=true&vCenter=true&width=650&lines=ReDroid+AI;AI+for+Reverse+Engineering"
     alt="typing"
   />
 </p>
